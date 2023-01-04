@@ -22,7 +22,7 @@ exports.createPost = async (req, res) => {
 exports.updatePost = async (req, res) => {
   const post = await Post.findOne({ _id: req.params.id });
   post.title = req.body.title;
-  post.description = req.body.description;
+  post.detail = req.body.detail;
   post.save();
   res.redirect(`/posts/${req.params.id}`);
 };

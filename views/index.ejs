@@ -16,12 +16,9 @@
               <%= posts[i].title %>
             </h2>
             <h3 class="post-subtitle">
-              <%= posts[i].description %>
+              <%= posts[i].detail %>
             </h3>
           </a>
-          <p class="post-meta">Posted by
-            <a href="#"><% posts[i].author %></a>
-            on <% new Date(posts[i].dateCreated).toLocaleString() %></p>
         </div>
         <hr>
         <% } %>
@@ -59,7 +56,7 @@
   <!-- Bootstrap core JavaScript -->
 
   <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
+  <script src="/js/clean-blog.min.js"></script>
 
 </body>
 

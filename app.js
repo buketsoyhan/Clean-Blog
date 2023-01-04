@@ -34,7 +34,7 @@ app.put('/posts/:id', postController.updatePost);
 app.delete('/posts/:id', postController.deletePost);
 
 app.get('/about', pageController.getAboutPage);
-app.get('/add_post', pageController.getAddPage);
+app.get('/add', pageController.getAddPage);
 app.get('/posts/edit/:id', pageController.getEditPage);
 
 app.listen(port, () => {
