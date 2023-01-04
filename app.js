@@ -9,10 +9,20 @@ const postController= require('./controllers/postController')
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/cleanblog-test-db', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect(
+    'mongodb+srv://buketsoyhan:Zr0cum37DwQcLCSk@buketsoyhan.05fmo.mongodb.net/?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => {
+    console.log('DB CONNECTED!');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 app.set('view engine', 'ejs');
 
